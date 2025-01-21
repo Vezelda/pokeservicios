@@ -219,6 +219,63 @@ main {
     color: #333;
 }
 
+/* Formulario */
+.contacto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo */
+    margin: 0 auto;
+}
+
+.contacto-formulario {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ajusta al tamaño máximo del contenedor */
+    text-align: center;
+}
+
+.contacto-formulario h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #031229;
+}
+
+.contacto-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contacto-formulario button {
+    background: #031229;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contacto-formulario button:hover {
+    background: #ff3700;
+}
 
 /* Footer */
 footer {
@@ -226,12 +283,24 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
-    margin-top: 100px;
+    margin-top: 42vh;
     
 }
 
 /* Responsiveness */
 @media (max-width: 768px) {
+
+    nav {
+        flex-direction: column; /* Cambia los enlaces a una columna */
+        gap: 10px; /* Espaciado entre enlaces */
+        align-items: center; /* Centra los enlaces horizontalmente */
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    header {
+        justify-content: center; /* Centra los elementos en móviles */
+    }
+    
     .hero h2 {
         font-size: 1.8rem;
     }
@@ -252,5 +321,17 @@ footer {
 
     .about-img {
         max-width: 90%;
+    }
+
+    .contacto-container {
+        padding: 20px;
+    }
+
+    .contacto-formulario {
+        width: 100%;
+    }
+
+    .contacto-formulario h2 {
+        font-size: 1.5rem;
     }
 }
